@@ -1,14 +1,14 @@
 
 const products = [
   // First 8 products
-  {name:"Cadbury Dairy Milk Silk Chocolate Bar",category:"Chocolates",weight:"150 g",price:180,display:"₹175–₹180",image:"silk-150g.webp"},
-  {name:"Britannia Good Day Butter Cookies",category:"Biscuits",weight:"150 g + 12% extra",price:30,image:"good-day.webp"},
-  {name:"Cadbury Oreo Mega Family Pack",category:"Biscuits",weight:"876.75 g",price:300,image:"oreo-mega.webp"},
-  {name:"Parle Hide & Seek With Almonds",category:"Biscuits",weight:"100 g",price:30,image:"hide-seek-almonds.webp"},
-  {name:"Parle Hide & Seek Choco Chip",category:"Biscuits",weight:"100 g",price:30,image:"hide-seek-choco-chip.webp"},
-  {name:"Garlic Bulbs",category:"Groceries",weight:"1 kg",price:180,image:"garlic.webp"},
-  {name:"Red Shallots",category:"Groceries",weight:"1 kg",price:60,image:"shallots.webp"},
-  {name:"Raw Shelled Peanuts",category:"Groceries",weight:"1 kg",price:120,image:"peanuts.webp"},
+  {name:"Cadbury Dairy Milk Silk Chocolate Bar",category:"Chocolates",weight:"150 g",price:180,display:"₹175–₹180",image:"download (11).webp"},
+  {name:"Britannia Good Day Butter Cookies",category:"Biscuits",weight:"150 g + 12% extra",price:30,image:"download (10).webp"},
+  {name:"Cadbury Oreo Mega Family Pack",category:"Biscuits",weight:"876.75 g",price:300,image:"download (9).webp"},
+  {name:"Parle Hide & Seek With Almonds",category:"Biscuits",weight:"100 g",price:30,image:"shopping (3).webp"},
+  {name:"Parle Hide & Seek Choco Chip",category:"Biscuits",weight:"100 g",price:30,image:"download (8).webp"},
+  {name:"Garlic Bulbs",category:"Groceries",weight:"1 kg",price:180,image:"images (1).jpeg"},
+  {name:"Red Shallots",category:"Groceries",weight:"1 kg",price:60,image:"download (7).webp"},
+  {name:"Raw Shelled Peanuts",category:"Groceries",weight:"1 kg",price:120,image:"download (5).webp"},
 
   // Lotte, Dark Fantasy and UNIBIC
   {name:"Lotte Original Choco Pie",category:"Biscuits",weight:"504 g / 18 pack",price:199,image:"download (45).webp"},
@@ -25,9 +25,9 @@ const products = [
   // Other products
   {name:"Godrej Cinthol Lime Soap",category:"Personal Care",weight:"100 g",price:42,image:"download (17).webp"},
   {name:"Bounty Coconut Milk Chocolate Bar",category:"Chocolates",weight:"57 g",price:80,image:"download (16).webp"},
-  {name:"Hauser XO Ball Pens",category:"Stationery",weight:"10 pens",price:100,image:"hauser-pens.webp"},
+  {name:"Hauser XO Ball Pens",category:"Stationery",weight:"10 pens",price:100,image:"download (15).webp"},
   {name:"Ariel Complete Detergent Powder",category:"Household",weight:"500 g",price:82,image:"images (3).jpeg"},
-  {name:"Fogg Paradise Body Spray",category:"Personal Care",weight:"120 ml",price:250,image:"fogg-paradise.webp"},
+  {name:"Fogg Paradise Body Spray",category:"Personal Care",weight:"120 ml",price:250,image:"download (14).webp"},
   {name:"KitKat 4-Finger",category:"Chocolates",weight:"38.5 g",price:30,image:"shopping (4).webp"},
   {name:"KitKat 2-Finger",category:"Chocolates",weight:"18.5 g",price:20,image:"images (2).jpeg"},
   {name:"Cadbury Dairy Milk",category:"Chocolates",weight:"25 g",price:25,image:"download (13).webp"},
@@ -39,12 +39,12 @@ const products = [
   {name:"Sensodyne Fresh Gel",category:"Personal Care",weight:"75 g",price:128,image:"download (22).webp"},
   {name:"Colgate ZigZag Charcoal Toothbrush",category:"Personal Care",weight:"1 piece",price:33,image:"download (21).webp"},
   {name:"Colgate ZigZag Medium Toothbrush",category:"Personal Care",weight:"1 piece",price:25,display:"₹19–₹35",image:"download (20).webp"},
-  {name:"Ajay Quest Hard Toothbrush",category:"Personal Care",weight:"1 piece",price:18,image:"download (18).webp"},
-  {name:"Sensodyne Sensitive Soft Toothbrush",category:"Personal Care",weight:"1 piece",price:50,display:"₹40–₹61",image:"images (4).jpeg"},
-  {name:"Dove Cream Beauty Bathing Bar",category:"Personal Care",weight:"100 g",price:62,image:"shopping (7).webp"},
-  {name:"Santoor Sandal & Turmeric Soap",category:"Personal Care",weight:"500 g / 4 pack",price:152,image:"shopping (6).webp"},
-  {name:"Nature Power Papaya Aura Soap",category:"Personal Care",weight:"125 g",price:28,image:"nature-power-soap.webp"},
-  {name:"Pears Soft & Fresh Glycerin Soap",category:"Personal Care",weight:"500 g / 4 pack",price:347,image:"pears-soap.webp"},
+  {name:"Ajay Quest Hard Toothbrush",category:"Personal Care",weight:"1 piece",price:18,image:"download (19).webp"},
+  {name:"Sensodyne Sensitive Soft Toothbrush",category:"Personal Care",weight:"1 piece",price:50,display:"₹40–₹61",image:"download (18).webp"},
+  {name:"Dove Cream Beauty Bathing Bar",category:"Personal Care",weight:"100 g",price:62,image:"images (4).jpeg"},
+  {name:"Santoor Skin Moisturising Soap",category:"Personal Care",weight:"125 g",price:35,image:"shopping (7).webp"},
+  {name:"Nature Power Papaya Aura Soap",category:"Personal Care",weight:"125 g",price:28,image:"shopping (6).webp"},
+  {name:"Pears Original Glycerin Soap",category:"Personal Care",weight:"125 g",price:40,image:"shopping (5).webp"},
 
   // Tea, drinks and toothpaste
   {name:"Brooke Bond Taj Mahal Tea",category:"Beverages",weight:"250 g",price:185,image:"shopping (11).webp"},
@@ -75,16 +75,16 @@ const products = [
   {name:"UNIBIC Snackers Assorted Cookies",category:"Biscuits",weight:"675 g / 10 pack",price:228,image:"download (40).webp"},
   {name:"Bingo Korean Style Hot & Spicy Chips",category:"Snacks",weight:"90 g",price:50,image:"download (39).webp"},
   {name:"Bingo Tedhe Medhe Masala Tadka",category:"Snacks",weight:"75 g",price:20,image:"download (38).webp"},
-  {name:"Bingo Cheese Nachos With Free Dip",category:"Snacks",weight:"82.5 g",price:40,image:"shopping (13).webp"},
+  {name:"Bingo Cheese Nachos",category:"Snacks",weight:"82.5 g",price:40,image:"shopping (13).webp"},
   {name:"Bingo Hashtags Spicy Masala Chips",category:"Snacks",weight:"58 g",price:20,image:"shopping (12).webp"},
   {name:"Bingo Tedhe Medhe Mast Masala Tadka",category:"Snacks",weight:"20 g",price:5,image:"download (37).webp"},
   {name:"Bingo Mad Angles Mmmm Masala",category:"Snacks",weight:"66 g",price:18,image:"download (36).webp"},
   {name:"Bingo Chilli Sprinkled Potato Chips",category:"Snacks",weight:"90 g",price:30,image:"download (35).webp"},
   {name:"Quaker Rolled Oats Cereal",category:"Groceries",weight:"1 kg",price:175,display:"₹160–₹190",image:"images.webp"},
 
-  // Additional 10 products
+  // Additional products
   {name:"Brooke Bond Red Label Tea",category:"Beverages",weight:"500 g",price:250,image:"red-label-tea.webp"},
-  {name:"Lay's American Style Cream & Onion Chips",category:"Snacks",weight:"50 g",price:20,image:"lays-chips.webp"},
+  {name:"Lay's Cream & Onion Chips",category:"Snacks",weight:"50 g",price:20,image:"lays-chips.webp"},
   {name:"Parry's White Label Sugar",category:"Groceries",weight:"1 kg",price:60,image:"white-label-sugar.webp"},
   {name:"Mysore Sandal Soap",category:"Personal Care",weight:"150 g",price:75,image:"mysore-sandal-soap.webp"},
   {name:"Rajdhani Chana Dal",category:"Groceries",weight:"1 kg",price:139,image:"chana-dal.webp"},
@@ -99,6 +99,7 @@ const productsArea = document.getElementById("products");
 const search = document.getElementById("search");
 const categoriesArea = document.getElementById("categories");
 const cartItemsArea = document.getElementById("cartItems");
+const sortSelect = document.getElementById("sort");
 
 let activeCategory = "All";
 let cart = {};
@@ -119,37 +120,38 @@ function renderCategories() {
 }
 
 function renderProducts() {
-  const query = search.value.toLowerCase();
+  const query = search.value.trim().toLowerCase();
 
   let list = products.filter(product => {
-    const matchesSearch =
-      (product.name + " " + product.category + " " + product.weight)
-      .toLowerCase().includes(query);
+    const text = `${product.name} ${product.category} ${product.weight}`.toLowerCase();
 
-    const matchesCategory =
-      activeCategory === "All" || product.category === activeCategory;
-
-    return matchesSearch && matchesCategory;
+    return text.includes(query) &&
+      (activeCategory === "All" || product.category === activeCategory);
   });
 
-  const sort = document.getElementById("sort").value;
-  if (sort === "low") list.sort((a, b) => a.price - b.price);
-  if (sort === "high") list.sort((a, b) => b.price - a.price);
-  if (sort === "name") list.sort((a, b) => a.name.localeCompare(b.name));
+  if (sortSelect.value === "low") {
+    list.sort((a, b) => a.price - b.price);
+  } else if (sortSelect.value === "high") {
+    list.sort((a, b) => b.price - a.price);
+  } else if (sortSelect.value === "name") {
+    list.sort((a, b) => a.name.localeCompare(b.name));
+  }
 
   document.getElementById("count").textContent =
     `${list.length} products found out of ${products.length}`;
 
   productsArea.innerHTML = list.map(product => {
     const index = products.indexOf(product);
+    const imagePath = "images/" +
+      product.image.split("/").map(encodeURIComponent).join("/");
 
     return `
       <article class="product">
         <img
-          src="images/${product.image.split("/").map(encodeURIComponent).join("/")}"
+          src="${imagePath}"
           alt="${product.name}"
           loading="lazy"
-          onerror="this.style.display='none'">
+          onerror="this.onerror=null;this.alt='Image unavailable';">
 
         <h3>${product.name}</h3>
         <p class="weight">${product.weight}</p>
@@ -166,26 +168,33 @@ function renderProducts() {
 function renderCart() {
   const entries = Object.entries(cart);
 
-  document.getElementById("cartCount").textContent =
-    entries.reduce((sum, [, qty]) => sum + qty, 0);
+  const count = entries.reduce((sum, [, qty]) => sum + qty, 0);
+  document.getElementById("cartCount").textContent = count;
 
-  cartItemsArea.innerHTML = entries.length ? entries.map(([index, qty]) => {
-    const p = products[Number(index)];
+  if (entries.length === 0) {
+    cartItemsArea.innerHTML = "<p>Your cart is empty.</p>";
+  } else {
+    cartItemsArea.innerHTML = entries.map(([index, qty]) => {
+      const p = products[Number(index)];
 
-    return `
-      <div class="cart-item">
-        <div>
-          <strong>${p.name}</strong>
-          <p>${money(p.price)} × ${qty}</p>
+      return `
+        <div class="cart-item">
+          <div>
+            <strong>${p.name}</strong>
+            <p>${money(p.price)} × ${qty}</p>
+          </div>
+
+          <div>
+            <button data-change="${index}" data-delta="-1">−</button>
+            <span>${qty}</span>
+            <button data-change="${index}" data-delta="1">+</button>
+          </div>
+
+          <p>${money(p.price * qty)}</p>
         </div>
-        <div>
-          <button data-change="${index}" data-delta="-1">−</button>
-          ${qty}
-          <button data-change="${index}" data-delta="1">+</button>
-        </div>
-      </div>
-    `;
-  }).join("") : "Your cart is empty.";
+      `;
+    }).join("");
+  }
 
   const total = entries.reduce((sum, [index, qty]) =>
     sum + products[Number(index)].price * qty, 0);
@@ -208,6 +217,7 @@ productsArea.addEventListener("click", event => {
 
   const index = button.dataset.add;
   cart[index] = (cart[index] || 0) + 1;
+
   renderCart();
 });
 
@@ -216,17 +226,24 @@ cartItemsArea.addEventListener("click", event => {
   if (!button) return;
 
   const index = button.dataset.change;
-  cart[index] = (cart[index] || 0) + Number(button.dataset.delta);
+  const delta = Number(button.dataset.delta);
 
-  if (cart[index] <= 0) delete cart[index];
+  cart[index] = (cart[index] || 0) + delta;
+
+  if (cart[index] <= 0) {
+    delete cart[index];
+  }
+
   renderCart();
 });
 
 search.addEventListener("input", renderProducts);
-document.getElementById("sort").addEventListener("change", renderProducts);
+sortSelect.addEventListener("change", renderProducts);
 
 document.getElementById("cartButton").addEventListener("click", () => {
-  document.getElementById("cartSection").scrollIntoView({behavior: "smooth"});
+  document.getElementById("cartSection").scrollIntoView({
+    behavior: "smooth"
+  });
 });
 
 document.getElementById("clearCart").addEventListener("click", () => {
@@ -237,4 +254,5 @@ document.getElementById("clearCart").addEventListener("click", () => {
 renderCategories();
 renderProducts();
 renderCart();
-                                            
+
+console.log("J-Mart loaded:", products.length, "products");
