@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="J-Mart - Fresh needs, happy homes. Shop groceries and household essentials.">
+  <title>J-Mart | Fresh Needs, Happy Homes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="J-Mart home">
+      <span class="brand-icon">🛒</span>
+      <span><strong>J-Mart</strong><small>Fresh Needs, Happy Homes</small></span>
+    </a>
+    <label class="searchbox">
+      <span class="sr-only">Search products</span>
+      <input id="searchInput" type="search" placeholder="Search for products..." autocomplete="off">
+      <span aria-hidden="true">🔍</span>
+    </label>
+    <nav class="nav">
+      <a href="#" class="nav-link">🏠 <span>Home</span></a>
+      <button id="openCart" class="nav-link" type="button">🛒 <span>Cart</span><b id="cartCount">0</b></button>
+      <button id="openLogin" class="nav-link" type="button">👤 <span>Login</span></button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">WELCOME TO J-MART</p>
+        <h1>Your Daily Essentials<br>Delivered Fresh</h1>
+        <p>Groceries · Household · Better Living</p>
+        <button class="primary-btn" id="shopNow">Shop Now <span>→</span></button>
+      </div>
+      <div class="hero-art" aria-label="Fresh grocery basket illustration" role="img">
+        <span class="produce">🥬 🍅 🥒 🥕 🍌 🥛 🥖</span>
+        <div class="basket"></div>
+        <p>Fresh<br>Quality<br>Affordable</p>
+      </div>
+    </section>
+
+    <div class="store-layout" id="productsSection">
+      <aside class="sidebar">
+        <h2>☷ &nbsp; Categories</h2>
+        <button class="category active" data-category="All Products">▦ &nbsp; All Products</button>
+        <button class="category" data-category="Cooking Oil">🫗 &nbsp; Cooking Oil</button>
+        <button class="category" data-category="Rice & Grains">🌾 &nbsp; Rice &amp; Grains</button>
+        <button class="category" data-category="Sugar & Salt">◇ &nbsp; Sugar &amp; Salt</button>
+        <button class="category" data-category="Flour & Spices">🌶️ &nbsp; Flour &amp; Spices</button>
+        <button class="category" data-category="Beverages">🥤 &nbsp; Beverages</button>
+        <button class="category" data-category="Tea & Coffee">☕ &nbsp; Tea &amp; Coffee</button>
+        <button class="category" data-category="Biscuits & Snacks">🍟 &nbsp; Biscuits &amp; Snacks</button>
+        <button class="category" data-category="Household Care">🧽 &nbsp; Household Care</button>
+        <button class="category" data-category="Personal Care">🧼 &nbsp; Personal Care</button>
+        <button class="category" data-category="Fresh Produce">🥬 &nbsp; Fresh Produce</button>
+      </aside>
+
+      <section class="catalog">
+        <div class="catalog-head">
+          <div><h2 id="catalogTitle">All Products</h2><span id="itemCount">(10 items)</span></div>
+          <select id="sortSelect" aria-label="Sort products">
+            <option value="popular">Sort by: Popularity</option>
+            <option value="low">Price: Low to High</option>
+            <option value="high">Price: High to Low</option>
+            <option value="name">Name: A to Z</option>
+          </select>
+        </div>
+        <div id="productGrid" class="product-grid"></div>
+        <p id="noResults" class="no-results" hidden>No products found. Try another search.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <span>© 2026 J-Mart. All rights reserved.</span>
+    <div><a href="#about">About Us</a><a href="mailto:contact@jmart.example">Contact Us</a><a href="#privacy">Privacy Policy</a></div>
+  </footer>
+
+  <dialog id="cartDialog" class="dialog">
+    <div class="dialog-head"><h2>Your Cart</h2><button class="close-btn" data-close="cartDialog" aria-label="Close">✕</button></div>
+    <div id="cartItems"></div>
+    <div class="cart-total"><strong>Total</strong><strong id="cartTotal">₹0</strong></div>
+    <button id="checkoutBtn" class="primary-btn full-width">Proceed to Checkout</button>
+    <p class="hint">Demo website: checkout does not process real payments.</p>
+  </dialog>
+
+  <dialog id="loginDialog" class="dialog">
+    <div class="dialog-head"><h2>Login / Sign Up</h2><button class="close-btn" data-close="loginDialog" aria-label="Close">✕</button></div>
+    <form id="loginForm">
+      <label class="form-label">Your name<input id="userName" type="text" placeholder="Enter your name" required minlength="2"></label>
+      <label class="form-label">Mobile number<input id="userPhone" type="tel" inputmode="numeric" placeholder="10-digit mobile number" pattern="[0-9]{10}" required></label>
+      <button class="primary-btn full-width" type="submit">Continue</button>
+    </form>
+    <p class="hint">Demo only: this form does not send or store your personal details.</p>
+    <p id="loginMessage" role="status"></p>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
