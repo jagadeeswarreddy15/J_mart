@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>J-Mart | Online Grocery Store</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f7f4;
+      color: #222;
+    }
+
+    header {
+      background: #087f3e;
+      color: white;
+      padding: 15px 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    button {
+      cursor: pointer;
+      border: none;
+      border-radius: 6px;
+      padding: 11px 16px;
+      font-weight: bold;
+    }
+
+    .header-btn {
+      background: white;
+      color: #087f3e;
+    }
+
+    .home {
+      min-height: 390px;
+      padding: 55px 8%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      background: linear-gradient(120deg, #e0f6df, #fff8df);
+    }
+
+    .home-content {
+      max-width: 600px;
+    }
+
+    .home h1 {
+      color: #087f3e;
+      font-size: clamp(34px, 5vw, 52px);
+      margin-bottom: 15px;
+    }
+
+    .home h2 {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+
+    .home p {
+      line-height: 1.7;
+      margin-bottom: 22px;
+    }
+
+    .shop-btn {
+      background: #087f3e;
+      color: white;
+      font-size: 16px;
+    }
+
+    .home-image {
+      font-size: clamp(65px, 12vw, 120px);
+    }
+
+    .products {
+      padding: 35px 5%;
+      text-align: center;
+    }
+
+    .products h2 {
+      color: #087f3e;
+      margin-bottom: 10px;
+    }
+
+    .products p {
+      margin-bottom: 22px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+      gap: 18px;
+    }
+
+    .product {
+      background: white;
+      padding: 20px 12px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px #00000012;
+    }
+
+    .product .emoji {
+      font-size: 45px;
+      margin-bottom: 12px;
+    }
+
+    .product h3 {
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+
+    .product p {
+      color: #087f3e;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+
+    .add-btn {
+      background: #087f3e;
+      color: white;
+    }
+
+    footer {
+      margin-top: 25px;
+      padding: 20px;
+      background: #075e30;
+      color: white;
+      text-align: center;
+    }
+
+    /* Login and Sign Up popup */
+    .login-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      background: #0009;
+      justify-content: center;
+      align-items: center;
+      padding: 15px;
+    }
+
+    .login-box {
+      background: white;
+      width: 100%;
+      max-width: 390px;
+      padding: 30px 24px;
+      border-radius: 12px;
+      position: relative;
+    }
+
+    .login-box h2 {
+      color: #087f3e;
+      margin-bottom: 10px;
+    }
+
+    .login-box .subtitle {
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .close-btn {
+      position: absolute;
+      right: 12px;
+      top: 12px;
+      background: #eee;
+      padding: 7px 11px;
+    }
+
+    .login-box input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 14px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 15px;
+    }
+
+    .login-submit {
+      width: 100%;
+      background: #087f3e;
+      color: white;
+      font-size: 16px;
+    }
+
+    .switch-text {
+      text-align: center;
+      margin-top: 18px;
+    }
+
+    .switch-btn {
+      background: transparent;
+      color: #087f3e;
+      padding: 5px;
+    }
+
+    #loginMessage {
+      margin-top: 12px;
+      color: #087f3e;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        justify-content: center;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .home {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 6%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">🛒 J-Mart</div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#products">Products</a>
+      <button class="header-btn" onclick="showCart()">
+        🛍️ Cart (<span id="cartCount">0</span>)
+      </button>
+      <button class="header-btn" onclick="openLogin()">
+        👤 Login / Sign Up
+      </button>
+    </nav>
+  </header>
+
+  <!-- HOME PAGE -->
+  <section class="home" id="home">
+    <div class="home-content">
+      <h1>Welcome to J-Mart!</h1>
+      <h2>Your Daily Essentials, All in One Place</h2>
+      <p>
+        Shop groceries, rice, cooking oil, snacks and household
+        essentials at great prices. Your everyday shopping starts here!
+      </p>
+      <button class="shop-btn"
+        onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">
+        Shop Now →
+      </button>
+    </div>
+
+    <div class="home-image" aria-label="Grocery shopping">
+      🛒 🥦 🍅
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="products" id="products">
+    <h2>Our Popular Products</h2>
+    <p>Choose your daily essentials</p>
+
+    <div class="product-grid">
+      <div class="product">
+        <div class="emoji">🍚</div>
+        <h3>India Gate Rice</h3>
+        <p>₹120</p>
+        <button class="add-btn" onclick="addToCart('India Gate Rice',120)">
+          Add to Cart
+        </button>
+      </div>
+
+      <div class="product">
+        <div class="emoji">🛢️</div>
+        <h3>Sunflower Oil</h3>
+        <p>₹150</p>
+        <button class="add-btn" onclick="addToCart('Sunflower Oil',150)">
+          Add to Cart
+        </button>
+      </div>
+
+      <div class="product">
+        <div class="emoji">🍅</div>
+        <h3>Fresh Tomatoes</h3>
+        <p>₹30</p>
+        <button class="add-btn" onclick="addToCart('Fresh Tomatoes',30)">
+          Add to Cart
+        </button>
+      </div>
+
+      <div class="product">
+        <div class="emoji">🍬</div>
+        <h3>White Sugar</h3>
+        <p>₹45</p>
+        <button class="add-btn" onclick="addToCart('White Sugar',45)">
+          Add to Cart
+        </button>
+      </div>
+
+      <div class="product">
+        <div class="emoji">🍵</div>
+        <h3>Red Label Tea</h3>
+        <p>₹90</p>
+        <button class="add-btn" onclick="addToCart('Red Label Tea',90)">
+          Add to Cart
+        </button>
+      </div>
+
+      <div class="product">
+        <div class="emoji">🥔</div>
+        <h3>Potato Chips</h3>
+        <p>₹20</p>
+        <button class="add-btn" onclick="addToCart('Potato Chips',20)">
+          Add to Cart
+        </button>
+      </div>
+
+      <div class="product">
+        <div class="emoji">🧼</div>
+        <h3>Mysore Sandal Soap</h3>
+        <p>₹40</p>
+        <button class="add-btn" onclick="addToCart('Mysore Sandal Soap',40)">
+          Add to Cart
+        </button>
+      </div>
+
+      <div class="product">
+        <div class="emoji">🥤</div>
+        <h3>Sprite</h3>
+        <p>₹40</p>
+        <button class="add-btn" onclick="addToCart('Sprite',40)">
+          Add to Cart
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOGIN / SIGN UP POPUP -->
+  <div class="login-overlay" id="loginPage">
+    <div class="login-box">
+      <button class="close-btn" onclick="closeLogin()" aria-label="Close">
+        ✕
+      </button>
+
+      <h2 id="loginTitle">Welcome to J-Mart</h2>
+      <p class="subtitle">Login or create your account</p>
+
+      <form id="accountForm">
+        <input
+          type="text"
+          id="loginName"
+          placeholder="Your name"
+          autocomplete="name"
+          required
+        >
+
+        <input
+          type="tel"
+          id="loginPhone"
+          placeholder="10-digit mobile number"
+          inputmode="numeric"
+          pattern="[0-9]{10}"
+          maxlength="10"
+          autocomplete="tel"
+          required
+        >
+
+        <button class="login-submit" type="submit">
+          Continue
+        </button>
+      </form>
+
+      <p id="loginMessage" role="status"></p>
+
+      <div class="switch-text">
+        <span id="toggleText">New customer?</span>
+        <button
+          type="button"
+          class="switch-btn"
+          id="toggleAccount"
+          onclick="toggleLoginMode()"
+        >
+          Sign Up
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 J-Mart | Your Daily Grocery Store</p>
+  </footer>
+
+  <script>
+    let isSignup = false;
+    let cart = [];
+
+    function openLogin() {
+      document.getElementById("loginPage").style.display = "flex";
+      document.getElementById("loginMessage").textContent = "";
+    }
+
+    function closeLogin() {
+      document.getElementById("loginPage").style.display = "none";
+    }
+
+    function toggleLoginMode() {
+      isSignup = !isSignup;
+
+      document.getElementById("loginTitle").textContent =
+        isSignup ? "Create Your Account" : "Welcome to J-Mart";
+
+      document.getElementById("toggleText").textContent =
+        isSignup ? "Already registered?" : "New customer?";
+
+      document.getElementById("toggleAccount").textContent =
+        isSignup ? "Login" : "Sign Up";
+
+      document.getElementById("loginMessage").textContent = "";
+    }
+
+    document.getElementById("accountForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const name = document.getElementById("loginName").value.trim();
+      const phone = document.getElementById("loginPhone").value.trim();
+
+      if (!/^[0-9]{10}$/.test(phone)) {
+        document.getElementById("loginMessage").textContent =
+          "Please enter a valid 10-digit mobile number.";
+        return;
+      }
+
+      document.getElementById("loginMessage").textContent =
+        "Hello, " + name + "! Demo " +
+        (isSignup ? "sign up" : "login") + " completed.";
+
+      // This is a demo only; no account or phone number is saved.
+    });
+
+    function addToCart(name, price) {
+      cart.push({name: name, price: price});
+      document.getElementById("cartCount").textContent = cart.length;
+      alert(name + " added to your cart!");
+    }
+
+    function showCart() {
+      if (cart.length === 0) {
+        alert("Your cart is empty. Please add some products.");
+        return;
+      }
+
+      const items = cart.map(item => item.name + " - ₹" + item.price).join("\n");
+      const total = cart.reduce((sum, item) => sum + item.price, 0);
+
+      alert("Your Cart:\n\n" + items + "\n\nTotal: ₹" + total);
+    }
+
+    document.getElementById("loginPage").addEventListener("click", function(event) {
+      if (event.target === this) closeLogin();
+    });
+  </script>
+
+</body>
+</html>
