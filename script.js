@@ -1,15 +1,15 @@
 
 const products = [
-  {id:1, name:"Freedom Sunflower Oil", size:"1 Litre", price:150, category:"Cooking Oil", image:"images/freedom-sunflower-oil.webp"},
-  {id:2, name:"India Gate Basmati Rice", size:"5 kg", price:450, category:"Rice & Grains", image:"images/india-gate-rice.webp"},
-  {id:3, name:"White Label Sugar", size:"1 kg", price:45, category:"Sugar & Salt", image:"images/white-label-sugar.webp"},
-  {id:4, name:"Tide Detergent Powder", size:"1 kg", price:110, category:"Household Care", image:"images/tide-detergent.webp"},
-  {id:5, name:"Lay's Chips", size:"52 g", price:20, category:"Biscuits & Snacks", image:"images/lays-chips.webp"},
-  {id:6, name:"Chana Dal", size:"500 g", price:65, category:"Rice & Grains", image:"images/chana-dal.webp"},
-  {id:7, name:"Sprite Soft Drink", size:"750 ml", price:40, category:"Beverages", image:"images/sprite.webp"},
-  {id:8, name:"Red Label Tea", size:"250 g", price:120, category:"Tea & Coffee", image:"images/red-label-tea.webp"},
-  {id:9, name:"Mysore Sandal Soap", size:"150 g", price:85, category:"Personal Care", image:"images/mysore-sandal-soap.webp"},
-  {id:10, name:"Fresh Tomato", size:"500 g", price:30, category:"Fresh Produce", image:"images/tomato.jpg"}
+  {id:1, name:"Freedom Sunflower Oil", size:"1 Litre", price:150, category:"Cooking Oil", image:"freedom-sunflower-oil.webp"},
+  {id:2, name:"India Gate Basmati Rice", size:"5 kg", price:450, category:"Rice & Grains", image:"india-gate-rice.webp"},
+  {id:3, name:"White Label Sugar", size:"1 kg", price:45, category:"Sugar & Salt", image:"white-label-sugar.webp"},
+  {id:4, name:"Tide Detergent Powder", size:"1 kg", price:110, category:"Household Care", image:"tide-detergent.webp"},
+  {id:5, name:"Lay's Chips", size:"52 g", price:20, category:"Biscuits & Snacks", image:"lays-chips.webp"},
+  {id:6, name:"Chana Dal", size:"500 g", price:65, category:"Rice & Grains", image:"chana-dal.webp"},
+  {id:7, name:"Sprite Soft Drink", size:"750 ml", price:40, category:"Beverages", image:"sprite.webp"},
+  {id:8, name:"Red Label Tea", size:"250 g", price:120, category:"Tea & Coffee", image:"red-label-tea.webp"},
+  {id:9, name:"Mysore Sandal Soap", size:"150 g", price:85, category:"Personal Care", image:"mysore-sandal-soap.webp"},
+  {id:10, name:"Fresh Tomato", size:"500 g", price:30, category:"Fresh Produce", image:"tomato.jpg"}
 ];
 
 let cart = {};
